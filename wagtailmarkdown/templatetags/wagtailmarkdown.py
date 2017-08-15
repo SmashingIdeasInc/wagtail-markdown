@@ -15,5 +15,5 @@ import wagtailmarkdown.utils
 register = template.Library()
 
 @register.filter(name='markdown')
-def markdown(value, kwargs):
+def markdown(value, kwargs={}):
     return wagtailmarkdown.utils.render(value, **kwargs)
